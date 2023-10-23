@@ -8,7 +8,7 @@ namespace ticTacToeGame
         {
             for (int z = 0; z < 5; z++)
             {
-                for (int y =0; y < 5; y++)
+                for (int y = 0; y < 5; y++)
                 {
                     Console.Write(x[z, y]);
                 }
@@ -18,21 +18,21 @@ namespace ticTacToeGame
         public static bool IsSpaceTaken(string[,] x, int b, int y) // LOOKING TO SEE IF SPACE IS TAKEN 
         {
             bool z = true;
-            if (x[b,y] != null)
+            if (x[b, y] != null)
             {
                 z = true;
             }
-            else if (x[b,y] == null)
+            else if (x[b, y] == null)
             {
                 z = false;
             }
             return z;
         }
 
-        public static bool threeInARow(string[,] x , string y) // CHECKING FOR THREE IN A ROW
+        public static bool threeInARow(string[,] x, string y) // CHECKING FOR THREE IN A ROW
         {
             bool winner = false;
-            if (x[0,0] == y && x[0,2] == y && x[0,4] == y)
+            if (x[0, 0] == y && x[0, 2] == y && x[0, 4] == y)
             {
                 winner = true;
             }
@@ -77,7 +77,7 @@ namespace ticTacToeGame
                                {"-", "-", "-",  "-", "-"},
                                { " ","|", " ", "|", " " } };
             byte counter = 1;
-            
+
 
             do // MAIN GAME LOOP
             {
@@ -103,7 +103,9 @@ namespace ticTacToeGame
 
                 bool valid = true;
                 do  // LOOP UNTIL A VALID INPUT IS GIVEN                                    
-                { 
+                {
+                    input = input.ToUpper();
+
                     if (input == "MIDDLE")
                     {
                         int l = 2, p = 2;
@@ -119,7 +121,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "MIDDLE LEFT")
+                    else if (input == "MIDDLE LEFT")
                     {
                         int l = 2, p = 0;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -134,7 +136,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "MIDDLE RIGHT")
+                    else if (input == "MIDDLE RIGHT")
                     {
                         int l = 2, p = 4;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -149,7 +151,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "TOP LEFT")
+                    else if (input == "TOP LEFT")
                     {
                         int l = 0, p = 0;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -164,7 +166,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "TOP MIDDLE")
+                    else if (input == "TOP MIDDLE")
                     {
                         int l = 0, p = 2;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -179,7 +181,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "TOP RIGHT")
+                    else if (input == "TOP RIGHT")
                     {
                         int l = 0, p = 4;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -194,7 +196,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "BOTTOM MIDDLE")
+                    else if (input == "BOTTOM MIDDLE")
                     {
                         int l = 4, p = 2;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -209,7 +211,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "BOTTOM RIGHT")
+                    else if (input == "BOTTOM RIGHT")
                     {
                         int l = 4, p = 4;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
@@ -224,7 +226,7 @@ namespace ticTacToeGame
                             valid = true;
                         }
                     }
-                    if (input == "BOTTOM LEFT")
+                    else if (input == "BOTTOM LEFT")
                     {
                         int l = 4, p = 0;
                         if (IsSpaceTaken(currentPlays, l, p) == false)
