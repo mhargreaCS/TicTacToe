@@ -1,7 +1,7 @@
 # TicTacToe
 building a ConsoleApp tic-tac-toe game using C#
 -----
-Only the raw .cs file is attached -- still requires all the project dependencies via Visual Studio (.NET 6.0 Console App)
+Only the raw .cs file is attached -- still requires all the project dependencies via Visual Studio (.NETCore.App)
 -----
 Would love to make code as minimal as possible
   - Create a method that uses an algebreic function to replace current "threeInARow" method - 10/23/23
