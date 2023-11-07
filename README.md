@@ -1,5 +1,8 @@
 # TicTacToe
 building a ConsoleApp tic-tac-toe game using C#
+
+New file added (ticTacToe2.0) containing the game with the if-else-if statements replaced with a switch statement to greatly improve runtime
+
 -----
 Only the raw .cs file is attached -- still requires all the project dependencies via Visual Studio (.NETCore.App)
 -----
